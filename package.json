@@ -8,6 +8,9 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@babylonjs/core": "^5.19.0",
+    "@babylonjs/loaders": "^5.19.0",
+    "@vue/runtime-core": "^3.2.37",
     "core-js": "^3.8.3",
     "vue": "^2.6.14"
   },

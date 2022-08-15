@@ -35,7 +35,7 @@ const createScene = (canvas) => {
 //////////////////////////////////////////////////////////////////////////////////
 // 部屋の作成
 var createRoom = function(){
-  SceneLoader.ImportMeshAsync("","https://kakerucode0233.github.io/models/", "room.glb", scene)
+  SceneLoader.ImportMeshAsync("","https://kakerucode0233.github.io/models/", "room2.glb", scene)
 }
 
 // カメラ作成
@@ -45,17 +45,17 @@ var createCamera = function (canvas) {
   scene.onPointerDown = function () {
       scene.onPointerDown = undefined
       camera.attachControl(canvas, true);
-      camera.inputs.attached.virtualJoystick.getLeftJoystick().setJoystickSensibility(0.02);
-      camera.inputs.attached.virtualJoystick.getRightJoystick().setJoystickSensibility(0.02);
+      camera.inputs.attached.virtualJoystick.getLeftJoystick().setJoystickSensibility(0.01);
+      camera.inputs.attached.virtualJoystick.getRightJoystick().setJoystickSensibility(0.01);
   }
 }
 
 // ライトの作成
 var createLight = function(){
-  // new HemisphericLight("light", Vector3.Up(), scene);
+  new HemisphericLight("light", Vector3.Up(), scene);
   var pl = new PointLight("pointLight", new Vector3(0,1.3,-0.1), scene);
   pl.diffuse = new Color3(1, 0.7, 0.6);
-  pl.specular = new Color3(1, 0, 0);
+  // pl.specular = new Color3(1, 0, 0);
   // var sl = new SpotLight("spotLight", new Vector3(0, 1, 2), new Vector3(0, 0, 0), Math.PI / 3, 2, scene);
 }
 
